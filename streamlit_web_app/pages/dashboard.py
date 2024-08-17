@@ -79,7 +79,7 @@ st.divider()
 st.header('Metrics')
 col1, col2, col3 = st.columns(3)
 
-col1.metric('Cost' ,str(st.session_state.cost['cost']) + '$' , st.session_state.cost  )
+col1.metric('Cost' ,str(st.session_state.cost) + '$' , st.session_state.cost  )
 col2.metric('Average Token Usage' , round(st.session_state.average_token_usage , 2) ,round(st.session_state.average_token_usage , 2) )
 col3.metric('Asked Questions Today' , st.session_state.question_count['today'] ,st.session_state.question_count['today'] -st.session_state.question_count['yesterday']  )
 
